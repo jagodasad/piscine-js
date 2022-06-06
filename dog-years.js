@@ -15,5 +15,5 @@ function dogYears(planet, dog) {
     dog = dog / oneYear
     let time = planets[planet]
     dog = dog / time * 7
-    return Math.round(age * 100) / 100;
+    return Math.round(dog * 100) / 100;
 }
