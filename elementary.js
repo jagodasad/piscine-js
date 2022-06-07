@@ -65,4 +65,4 @@ const modulo = (a,b) => {
 }
 
 
-console.log(modulo(7,2))
+// console.log(modulo(7,2))
