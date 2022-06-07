@@ -20,7 +20,7 @@ function indexOf(x, y, z = 0) {
 function lastIndexOf(x, y, z = x.length - 1) {
     let a = -1
     for(let i = z; i >= 0; i--) {
-        if(y[i] === y) {
+        if(x[i] === y) {
             return i
         }
     }
