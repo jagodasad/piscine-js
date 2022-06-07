@@ -5,7 +5,7 @@ function repeat(str, number) {
     }
     while (number !== 1 ) {
         str += a
-        count --
+        number --
     }
     return str
 }
