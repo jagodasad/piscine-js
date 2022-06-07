@@ -1,20 +1,14 @@
-function words(str) {
-    return str.split(' ')
+let words = (str) => str.split(' ');
 
-}
 
-function sentence(arr) {
-    return arr.join(' ')
-}
 
-function yell(str) {
-    return str.toUpperCase()
-}
+let sentence = (arr) => arr.join(' ');
 
-function whisper(str) {
-    return '*' + str.toLowerCase() + '*'
-}
 
-function capitalize(str) {
-    return str.toUpperCase()[0] + str.slice(1).toLowerCase
-}
+let yell = (str) => str.toUpperCase();
+
+
+let whisper = (str) => "*"+ str.toLowerCase()+ "*"
+
+
+let capitalize = (str) => str[0].toUpperCase() + str.slice(1,str.length).toLowerCase();
