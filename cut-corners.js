@@ -1,58 +1,58 @@
-function round(a) {
-    let x
-    let y
-    let z = false
-    if (a < 0) {
-        a = -a
-        z = true
+const round = (num) => {
+    let neg = false
+    if (num < 0) {
+        neg = true
+        num *= -1
     }
-    x = a % 1
-    if (x > 0.5) {
-        y = a + 1 - x
-    } else {
-        y = a - x
+
+    let sub = false
+    if (num%1 === 0) {
+        return num
+    } else if (num%1 > 0.5) {
+        sub = true
     }
-    if (z) {
-        y = -y
+    
+    let result = num - (num%1)
+
+    if ((num%1 >= 0.5 && num%1 <= 0.6) && !sub && !neg) {
+        return result+1
     }
-    return y
+    
+    return sub ? neg ? (result*-1)-1 : result+1: neg ? (result*-1) : result
 }
-function ceil(a) {
-    let x
-    let y
-    x = a % 1
-    if (a > 0 && x != 0) {
-        return y = a + 1 - x
-    } else {
-        return y = a - x
+
+const ceil = (num) => {
+    if (num%1 === 0) {
+        return num
     }
-    return a
+
+    let neg = false
+    if (num < 0) {
+        neg = true
+        num *= -1
+    }
+
+    return num%1 >= 0.5 ? neg ? (round(num)*-1)+1 : round(num) : neg ? round(num)*-1 : round(num)+1
 }
-function floor(a) {
-    let x
-    let y
-    x = a % 1
-    if (a > 0 && x != 0) {
-        return y = a - x
-    } else if (x === 0) {
-        return a
-    } else {
-        let x
-        x = 1 + x
-        return y = a - x
+
+const floor = (num) => {
+    if (num%1 === 0) {
+        return num
     }
-    return a
+
+    let neg = false
+    if (num < 0) {
+        neg = true
+        num *= -1
+    }
+
+    return num%1 >= 0.5 ? neg ? (round(num)*-1) : round(num)-1 : neg ? (round(num)*-1)-1 : round(num)
 }
-function trunc(a) {
-    let x
-    let y
-    x = a % 1
-    if (a > 0 && x != 0) {
-        return y = a - x
-    } else {
-        let x
-        x = 1 + x
-        return y = a - x
+
+const trunc = (num) => {
+    if (num%1 === 0) {
+        return num
     }
-    return a
+
+    return num <= 0 ? num*-1%1 > 0.5 ? round(num)+1 : round(num) : num%1 >= 0.5 ? round(num)-1 : round(num)
 }
