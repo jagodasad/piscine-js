@@ -1,26 +1,29 @@
 function split(str, sep) {
-    let arr = []
-    for (let i = 0; i < str.length - sep.length+1; i++) {
-        if (str.slice(i,i+sep.length) == sep) {
-            arr.push(str.slice(0, i))
-            str = str.slice(i + sep.length)
-            i = 0
-        }
+    let words = [str]
+    if (sep === "") return Array.from(str)
+    if (sep === undefined) return [str]
+
+    str += sep
+    while (true) {
+        let index = str.indexOf(sep)
+        if (index === -1) break
+
+        words.push(str.slice(0, index))
+        str = str.slice(index + sep.length)
     }
-    arr.push(str)
-    return arr
+
+    if (words.length > 1) words.shift()
+
+    return words
 }
 
-function join(arr, sep) {
-    let res = ''
-    for (let i = 0; i < arr.length; i++) {
-        if (sep.length == 0) {
-            res += arr[i]
-        } else {
-            res += arr[i] + sep
+function join(arr, sep = ',') {
+    let res = ""
+    for (const index in arr) {
+        res += arr[index]
+        if (index < arr.length - 1) {
+            res += sep
         }
     }
-
-    res = res.slice(0, res.length - sep.length)
     return res
 }
