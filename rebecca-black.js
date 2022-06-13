@@ -3,14 +3,15 @@ function getWeekDay(date) {
     return days[date.getDay()];
 }
 
-function isFriday(date) {
-    let friday = getWeekDay(date)
-    if(friday = 'Friday') {
-        return true
-    } else {
-        return false
-    }
-}
+// function isFriday(date) {
+//     let friday = getWeekDay(date)
+//     if(friday = 'Friday') {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+const isFriday = (date) => date.getDay() == 5
 
 function isWeekend(date) {
     let friday = getWeekDay(date)
