@@ -11,5 +11,5 @@ function firstDayWeek(week, year) {
 }
 
 function formatDate(y) {
-    return y.toISOString().slice(0, 10).split('-')
+    return y.toISOString().slice(0, 10).split('-').reverse().join('-')
 }
