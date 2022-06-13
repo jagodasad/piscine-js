@@ -1,9 +1,9 @@
-const isValid = (date) => {
-    let k = new Date(date)
-    if (date.toString() !== 'Invalid Date'){
+function isValid(date){
+    if(isNaN(date)|| date == 0){
+        return false
+    }else{
         return true
     }
-    return false
 }
 
 function isAfter(date1, date2) {
