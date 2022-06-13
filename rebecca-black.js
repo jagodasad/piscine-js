@@ -1,6 +1,6 @@
 const isFriday = (date) => date.getDay() == 5
 
-const isWeekend = (date) => date.getDay() == 0 || date.getDay() == 0
+const isWeekend = (date) => date.getDay() == 0 || date.getDay() == 6
 
 const isLeapYear = (date) => date.getFullYear()%400 == 0 ? true : date.getFullYear%100 == 0 ? false : date.getFullYear%4 == 0 ? true : false
 
