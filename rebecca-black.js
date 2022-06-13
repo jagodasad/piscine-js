@@ -1,52 +1,9 @@
-function getWeekDay(date) {
-    let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    return days[date.getDay()];
-}
-
-// function isFriday(date) {
-//     let friday = getWeekDay(date)
-//     if(friday = 'Friday') {
-//         return true
-//     } else {
-//         return false
-//     }
-// }
 const isFriday = (date) => date.getDay() == 5
 
-function isWeekend(date) {
-    let friday = getWeekDay(date)
-    if(friday === 'Saturday' || friday === 'Sunday') {
-        return true
-    } else {
-        return false
-    }
-}
+const isWeekend = (date) => date.getDay() == 0 || date.getDay() == 0
 
-function isLeapYear(date){
-    var result; 
-    date = parseInt(document.getElementById("isYear").value);
-    if (years/400){
-      result = true
-    }
-    else if(years/100){
-      result = false
-    }
-    else if(years/4){
-      result= true
-    }
-    else{
-      result= false
-    }
-    return result
- }
+const isLeapYear = (date) => date.getFullYear()%400 == 0 ? true : date.getFullYear%100 == 0 ? false : date.getFullYear%4 == 0 ? true : false
 
-function isLastDayOfMonth(date) {
-    let month = date.getMonth()
-    date.setHours(30)
-    let getMonth = date.getMonth()
-    if(month != getMonth) {
-        return true
-    } else {
-        return false
-    }
-}
+const isEvenMonth = (month) => month == 12 ? false : month%2  == 0
+
+const isLastDayOfMonth = (date) => date.getMonth() + 1 == 2 ? isLeapYear(date) ? date.getDate() == 29 : date.getDate() == 28 : isEvenMonth(date.getMonth() +1) ? date.getDate() == 30 : date.getDate() == 31
