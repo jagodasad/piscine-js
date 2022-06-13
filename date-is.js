@@ -32,4 +32,4 @@ function isPast(date) {
     return date < Date.now()
 }
 
-// console.log(isValid(''))
+console.log(isValid(''))
