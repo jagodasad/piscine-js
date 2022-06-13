@@ -2,7 +2,7 @@
 function addWeek(date) {
     const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'secondMonday', 'secondTuesday', 'secondWednesday', 'secondThursday', 'secondFriday', 'secondSaturday', 'secondSunday',]
     const start = new Date('0001-01-01')
-    const days = Math.round((date.getTime() - start.getTime()) / (100 * 60 * 60 * 24))
+    const days = Math.round((date.getTime() - start.getTime()) / (1000 * 60 * 60 * 24))
     return daysOfWeek[days % 14]
 }
 
