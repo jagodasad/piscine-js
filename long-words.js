@@ -7,5 +7,5 @@ function oneLongWord(arr){
 }
 
 function noLongWords(arr){
-    return arr.some(str => str.length >= 7)
+    return !arr.some(str => str.length >= 7)
 }
