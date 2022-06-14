@@ -6,6 +6,6 @@ function oneLongWord(arr){
     return arr.some(str => str.length >= 10)
 }
 
-function oneLongWord(arr){
+function noLongWords(arr){
     return arr.some(str => str.length >= 7)
 }
