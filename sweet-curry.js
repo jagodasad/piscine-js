@@ -12,9 +12,6 @@ function mult2(a) {
     }
   }
 
-  function sub (a, b, c, d) {
-    return a - b - c - d;
-  }
 
   function sub4(a) {
     return function(b) {
