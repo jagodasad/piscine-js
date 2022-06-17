@@ -42,5 +42,7 @@ export const moveCircle = (e) => {
 let box
 export const setBox = () => {
     box = document.createElement('div')
-    box = createCircle
+    box.classList.add('box')
+    box.style.position = relative
+
 } 
