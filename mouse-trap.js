@@ -41,5 +41,6 @@ export const moveCircle = (e) => {
 
 let box
 export const setBox = () => {
-    
+    box = document.createElement('div')
+    box = createCircle
 } 
