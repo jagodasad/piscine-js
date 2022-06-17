@@ -10,5 +10,13 @@ export const compose = (event) => {
                 el.remove()
             })
         }
+    } else if (key) {
+        let div = document.createElement('div')
+        div.classList.add('note')
+        div.innerHTML = key
+        document.body.append(div)
+        div.style.backgroundColor = `rgb(10, ${key.charCodeAt(0)}, 10)`
     }
 }
+
+document.addEventListener('keydown', compose);
