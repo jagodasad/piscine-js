@@ -1,5 +1,3 @@
-
-
 let lastCircle
 export const createCircle = (e) => {
     if (!e) return
@@ -40,3 +38,8 @@ export const moveCircle = (e) => {
         lastCircle.style.left = `${x - 25}px`
     }
 }
+
+let box
+export const setBox = () => {
+    
+} 
