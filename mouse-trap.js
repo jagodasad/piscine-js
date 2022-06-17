@@ -50,8 +50,8 @@ export const setBox = () => {
     document.body.append(box)
     box.top = box.getBoundingClientRect().top + 25
     box.left = box.getBoundingClientRect().left + 25
-    box.right = box.getBoundingClientRect().right + 25
-    box.bottom = box.getBoundingClientRect().bottom + 25
+    box.right = box.getBoundingClientRect().right - 25
+    box.bottom = box.getBoundingClientRect().bottom - 25
 }
 document.addEventListener('mousemove', moveCircle)
 document.addEventListener('mousedown', createCircle)
