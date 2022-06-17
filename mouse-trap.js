@@ -43,6 +43,15 @@ let box
 export const setBox = () => {
     box = document.createElement('div')
     box.classList.add('box')
-    box.style.position = relative
-
-} 
+    box.style.position = 'relative'
+    box.style.margin = 'auto'
+    box.style.height = '300px'
+    box.style.width = '500px'
+    document.body.append(box)
+    box.top = box.getBoundingClientRect().top + 25
+    box.left = box.getBoundingClientRect().left + 25
+    box.right = box.getBoundingClientRect().right + 25
+    box.bottom = box.getBoundingClientRect().bottom + 25
+}
+document.addEventListener('mousemove', moveCircle)
+document.addEventListener('mousedown', createCircle)
