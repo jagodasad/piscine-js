@@ -49,5 +49,29 @@ export const grid = () => {
         textarea.value = ''
         grid()
     })
+    form.append(textarea, button)
+    document.body.append(ranges, form)
 
+    list.forEach(el => {
+        let div = document.createElement('div')
+        div.classList.add('gossip')
+        div.innerHTML = el
+        document.body.append(div)
+    })
+
+    width.addEventListener('input', (e) => {
+        Array.from(document.getElementsByClassName('gossip')).forEach(el => {
+            el.style.width = `${e.target.value}px`
+        })
+    })
+    fontsize.addEventListener('input', (e) => {
+        Array.from(document.getElementsByClassName('gossip')).forEach(el => {
+            el.style.fontSize = `${e.target.value}px`
+        })
+    })
+    background.addEventListener('input', (e) => {
+        Array.from(document.getElementsByClassName('gossip')).forEach(el => {
+            el.style.background = `hsl(280, 50%, ${e.target.value}%)`
+        })
+    })
 }
