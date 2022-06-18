@@ -1,0 +1,14 @@
+    <select>
+    <option value="10">10</option>
+    <option value="20">20</option>
+    <option value="50">50</option>
+    <option value="100">100</option>
+    <option value="All">All</option>
+    </select>
+
+    $(function(){
+    var $select = $(".10-100");
+    for (i=10;i<=100;i++){
+        $select.append($('<option></option>').val(i).html(i))
+    }
+});​
