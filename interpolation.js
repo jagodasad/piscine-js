@@ -6,5 +6,5 @@ function interpolation(obj) {
         obj.callback([x, y])
         step++
         if (step === obj.step) clearInterval(interval)
-    }, obj.duration / obj.step);
+    }, obj.duration / obj.step)
 }
