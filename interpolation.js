@@ -1,10 +1,10 @@
-function interpolation(object) {
+function interpolation(obj) {
     let step = 0
     let interval = setInterval(() => {
-        let d = object.start = step * (object.end - object.start) / object.step
-        let t = (step + 1) * object.duration / object.step
-        object.callback([d, t])
+        let x = obj.start = step * (obj.end - obj.start) / obj.step
+        let y = (step + 1) * obj.duration / obj.step
+        obj.callback([x, y])
         step++
-        if (step === object.step) clearInterval(interval)
-    }, object.duration / object.step);
+        if (step === obj.step) clearInterval(interval)
+    }, obj.duration / obj.step);
 }
