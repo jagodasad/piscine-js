@@ -15,5 +15,10 @@ function pronoun(str) {
 }
 
 function isPronoun(str) {
+     const pronouns = ['i', 'you', 'he', 'she', 'it', 'we', 'they']
+    for (const key in pronouns) {
+        if (pronouns[key].toLowerCase() === str.toLowerCase()) return true
+    }
+    return false   
 
 }    
